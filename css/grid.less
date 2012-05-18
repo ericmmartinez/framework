@@ -10,18 +10,18 @@
 		width:100%;
 
 		/**
-		 * First non-trivial grid cells, or second grid cells following a
-		 * trivial grid cell float left.
+		 * First non-defer grid cells, or second grid cells following a
+		 * defer grid cell float left.
 		 */
-		.grid-cell:nth-of-type(1):not(.trivial),
-		.trivial + .grid-cell:nth-of-type(2) { 
+		.grid-cell:nth-of-type(1):not(.defer),
+		.defer + .grid-cell:nth-of-type(2) { 
 			float:left;
 		}
 
 		/**
-		 * Second grid cells or trivial grid cells float right.
+		 * Second grid cells or defer grid cells float right.
 		 */
-		.grid-cell:nth-of-type(2), .trivial {
+		.grid-cell:nth-of-type(2), .defer {
 			float:right;
 		}
 	}

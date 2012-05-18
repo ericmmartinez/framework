@@ -77,7 +77,7 @@
 		<h2>Reversing Source Order</h2>
 		<?php foreach ($splits as $split) : ?>
 			<div class="grid-row <?php print $split; ?>">
-				<div class="grid-cell trivial">(1) .grid-cell .trivial</div>
+				<div class="grid-cell defer">(1) .grid-cell .defer</div>
 				<div class="grid-cell">(2) .grid-cell</div>
 			</div>
 		<?php endforeach; ?>
@@ -95,12 +95,12 @@
 		</div>
 
 		<div class="grid-row split-1-1">
-			<div class="trivial grid-cell grid-row split-2-1">
-				<div class="trivial grid-cell">(1) .grid-cell .trivial</div>
+			<div class="defer grid-cell grid-row split-2-1">
+				<div class="defer grid-cell">(1) .grid-cell .defer</div>
 				<div class="grid-cell">(2) .grid-cell</div>
 			</div>
 			<div class="grid-cell grid-row split-2-1">
-				<div class="trivial grid-cell">(1) .grid-cell .trivial</div>
+				<div class="defer grid-cell">(1) .grid-cell .defer</div>
 				<div class="grid-cell">(2) .grid-cell</div>
 			</div>
 		</div>
