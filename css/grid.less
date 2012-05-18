@@ -1,0 +1,73 @@
+/** Mobile-first (and non-media-query-compliant browsers) styles. */
+
+/** Modern browsers with larger screens. */
+@media (min-width:960px) {
+.grid-wrapper {
+	display:block;
+	margin:0 auto;
+
+	.grid-row {
+		width:100%;
+
+		/**
+		 * First non-trivial grid cells, or second grid cells following a
+		 * trivial grid cell float left.
+		 */
+		.grid-cell:nth-of-type(1):not(.trivial),
+		.trivial + .grid-cell:nth-of-type(2) { 
+			float:left;
+		}
+
+		/**
+		 * Second grid cells or trivial grid cells float right.
+		 */
+		.grid-cell:nth-of-type(2), .trivial {
+			float:right;
+		}
+	}
+
+
+	.split-3-1 {
+		> .grid-cell:nth-of-type(1) {width:74.5%;}
+		> .grid-cell:nth-of-type(2) {width:24.5%;}
+	}
+	.split-2-1 {
+		> .grid-cell:nth-of-type(1) {width:66.16666%;}
+		> .grid-cell:nth-of-type(2) {width:32.83333%;}
+	}
+	.split-1-1 {
+		> .grid-cell {width:49.5%;}
+	}
+	.split-1-2 {
+		> .grid-cell:nth-of-type(1) {width:32.83333%;}
+		> .grid-cell:nth-of-type(2) {width:66.16666%;}
+	}
+	.split-1-3 {
+		> .grid-cell:nth-of-type(1) {width:24.5%;}
+		> .grid-cell:nth-of-type(2) {width:74.5%;}
+	}
+
+	.grid-row {
+		.split-3-1 {
+			> .grid-cell:nth-of-type(1) {width:74%;}
+			> .grid-cell:nth-of-type(2) {width:24%;}
+		}
+		.split-2-1 {
+			> .grid-cell:nth-of-type(1) {width:65.91666%;}
+			> .grid-cell:nth-of-type(2) {width:32.58333%;}
+		}
+		.split-1-1 {
+			> .grid-cell {width:49%;}
+		}
+		.split-1-2 {
+			> .grid-cell:nth-of-type(1) {width:32.58333%;}
+			> .grid-cell:nth-of-type(2) {width:65.91666%;}
+		}
+		.split-1-3 {
+			> .grid-cell:nth-of-type(1) {width:24%;}
+			> .grid-cell:nth-of-type(2) {width:74%;}
+		}
+	}
+}
+.fixed .grid-wrapper {width:960px;}
+}
