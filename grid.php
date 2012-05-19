@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>Grid Demo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 	<?php if (file_exists('css/grid.css')) : ?>
 		<!-- Production Link (try "make clean" to use development) -->
 		<link rel="stylesheet" type="text/css" href="css/grid.css"/>

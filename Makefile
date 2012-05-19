@@ -1,6 +1,7 @@
 LESSC = lessc
 
 CSS_FILES = \
+	css/reset.css\
 	css/grid.css
 
 JS_FILES = \
