@@ -2,12 +2,13 @@ LESSC = lessc
 
 CSS_FILES = \
 	css/reset.css\
-	css/grid.css
+	css/grid.css\
+	css/typeset.css
 
 JS_FILES = \
 	js/test.min.js
 	
-.PHONY: css js
+.PHONY: all js css clean
 
 all: js css
 
